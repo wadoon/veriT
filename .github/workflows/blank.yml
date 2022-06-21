@@ -10,8 +10,8 @@ jobs:
       matrix:
         include:
           - os: ubuntu-latest
-            artifact_name: veriT-linux.tar.gz
-            asset_name: install.tar.gz
+            artifact_name: install.tar.gz
+            asset_name: veriT-linux.tar.gz
           - os: windows-latest
             artifact_name: mything.exe
             asset_name: mything-windows-amd64
