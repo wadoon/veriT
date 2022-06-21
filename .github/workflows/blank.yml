@@ -29,6 +29,12 @@ jobs:
         if: runner.os == 'macOS'
         run: |
           brew install automake
+      - uses: msys2/setup-msys2@v2
+        if: runner.os == 'windows'
+        with:
+          update: true
+          install: >-
+            autotools
 
       #- name: Setup C++ environment
       #  uses: kurocha/setup-cpp@v1
