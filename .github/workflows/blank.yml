@@ -30,10 +30,10 @@ jobs:
       # Runs a single command using the runners shell
       - run: autoreconf -f -i
       - name: configure
-        run:  ./configure LFLAGS="--always-interactive" --prefix=./install
+        run:  ./configure LFLAGS="--always-interactive" --prefix=$(pwd)/install
       - name: build
         run: make clean && make install
-      - run: tar cvf install.tar.gz install    
+      - run: tar cvf install.tar.gz $(pwd)/install    
       - name: Upload binaries to release
         uses: svenstaro/upload-release-action@v2
         with:
